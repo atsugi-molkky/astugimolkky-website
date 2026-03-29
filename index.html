@@ -24,7 +24,7 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;padding:2rem 2rem 5rem}
 
 /* ▼▼▼ 変更箇所① hero-bgの背景画像をmolkky-bg.pngに変更 ▼▼▼ */
-.hero-bg{position:absolute;inset:0;background:url('molkky-bg.png') center/cover no-repeat;z-index:0}
+.hero-bg{position:absolute !important;inset:0;background:url('molkky-bg.png') center/cover no-repeat;z-index:0 !important}
 
 /* ▼▼▼ 変更箇所② オーバーレイを薄めにして画像を活かす ▼▼▼ */
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,15,.40) 0%,rgba(10,10,15,.60) 40%,rgba(10,10,15,.88) 80%,var(--dark) 100%)}
