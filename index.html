@@ -23,20 +23,22 @@ html{scroll-behavior:smooth}
 body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--white);overflow-x:hidden;line-height:1.7}
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;padding:2rem 2rem 5rem}
 
-/* ▼▼▼ 変更箇所① hero-bgの背景画像をmolkky-bg.pngに変更 ▼▼▼ */
-.hero-bg{position:absolute !important;inset:0;background:url('molkky-bg.png') center/cover no-repeat;z-index:0 !important}
+/* PC：画像を85%サイズ・上寄りでスキットルも見える */
+.hero-bg{position:absolute !important;inset:0;background:url('molkky-bg.png') center 30% / 85% auto no-repeat;z-index:0 !important}
 
-/* ▼▼▼ 変更箇所② オーバーレイを薄めにして画像を活かす ▼▼▼ */
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,15,.40) 0%,rgba(10,10,15,.60) 40%,rgba(10,10,15,.88) 80%,var(--dark) 100%)}
-
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,15,.50) 0%,rgba(10,10,15,.65) 40%,rgba(10,10,15,.90) 80%,var(--dark) 100%)}
 .hero>*{position:relative;z-index:1}
 .hero-badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:.4rem 1.5rem;font-size:.75rem;letter-spacing:.3em;font-family:'Oswald',sans-serif;margin-bottom:2rem;animation:fadeSlideDown .8s ease-out}
 .hero-prize{font-family:'Oswald',sans-serif;font-size:clamp(3rem,10vw,8rem);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:.5rem;animation:fadeSlideDown .8s ease-out .1s both}
 .hero-prize .yen{color:var(--gold);text-shadow:0 0 40px var(--gold-glow),0 0 80px rgba(212,160,23,.15)}
 .hero-title{font-family:'Oswald',sans-serif;font-size:clamp(1.2rem,3vw,2rem);font-weight:500;letter-spacing:.15em;color:var(--white-muted);margin-bottom:2rem;animation:fadeSlideDown .8s ease-out .2s both}
-.hero-subtitle{font-size:.95rem;color:var(--white-muted);max-width:600px;margin-bottom:1.5rem;animation:fadeSlideDown .8s ease-out .3s both}
-.hero-legal{font-size:.75rem;color:var(--white-muted);line-height:2;margin-bottom:2rem;text-align:center;animation:fadeSlideDown .8s ease-out .35s both;max-width:520px}
-.hero-app-banner{border:1px solid var(--gold);background:rgba(212,160,23,.08);padding:2rem 2.5rem;text-align:center;max-width:560px;width:100%;animation:fadeSlideDown .8s ease-out .4s both}
+
+/* 視認性改善：テキストシャドウ追加 */
+.hero-subtitle{font-size:.95rem;color:var(--white);max-width:600px;margin-bottom:1.5rem;animation:fadeSlideDown .8s ease-out .3s both;text-shadow:0 1px 8px rgba(0,0,0,.9),0 0 20px rgba(0,0,0,.8)}
+.hero-legal{font-size:.75rem;color:rgba(200,200,210,1);line-height:2;margin-bottom:2rem;text-align:center;animation:fadeSlideDown .8s ease-out .35s both;max-width:520px;text-shadow:0 1px 6px rgba(0,0,0,.95),0 0 16px rgba(0,0,0,.9)}
+
+/* ENTRYバナー：背景を半透明ダークに強化して視認性UP */
+.hero-app-banner{border:1px solid var(--gold);background:rgba(10,10,15,.75);backdrop-filter:blur(4px);padding:2rem 2.5rem;text-align:center;max-width:560px;width:100%;animation:fadeSlideDown .8s ease-out .4s both}
 .app-banner-title{font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:600;color:var(--gold);margin-bottom:.4rem;letter-spacing:.1em;line-height:1.6}
 .app-banner-title .entry-en{display:block;font-size:1rem;letter-spacing:.25em;opacity:.85}
 .app-banner-title .entry-ja{display:block;font-size:1.05rem}
@@ -168,7 +170,27 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
 @keyframes fadeSlideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
 @keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-@media(max-width:768px){.section{padding:3.5rem 1.2rem}.pricing-grid{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr}.sponsor-benefits{grid-template-columns:1fr}.nav-inner{justify-content:flex-start;gap:0}.nav a{padding:.4rem .7rem;font-size:.72rem}.app-banner-buttons{flex-direction:column;align-items:center}.hero-app-banner{padding:1.5rem 1.2rem}.ambassador-img{width:100%;max-width:300px;height:auto}.ambassador-section{justify-content:center;text-align:center}.detail-tab{padding:.8rem 1rem;font-size:.8rem}.conditions-inner{padding:2rem 1.2rem}.schedule-table{font-size:.75rem}.schedule-table th,.schedule-table td{padding:.5rem .6rem}}
+
+@media(max-width:768px){
+  .section{padding:3.5rem 1.2rem}
+  .pricing-grid{grid-template-columns:1fr}
+  .info-grid{grid-template-columns:1fr}
+  .sponsor-benefits{grid-template-columns:1fr}
+  .nav-inner{justify-content:flex-start;gap:0}
+  .nav a{padding:.4rem .7rem;font-size:.72rem}
+  .app-banner-buttons{flex-direction:column;align-items:center}
+  .hero-app-banner{padding:1.5rem 1.2rem}
+  .ambassador-img{width:100%;max-width:300px;height:auto}
+  .ambassador-section{justify-content:center;text-align:center}
+  .detail-tab{padding:.8rem 1rem;font-size:.8rem}
+  .conditions-inner{padding:2rem 1.2rem}
+  .schedule-table{font-size:.75rem}
+  .schedule-table th,.schedule-table td{padding:.5rem .6rem}
+
+  /* ▼▼▼ スマホ：画像全体が見えるよう contain + 中央配置に変更 ▼▼▼ */
+  .hero-bg{background-size:contain !important;background-position:center 20% !important;background-color:var(--dark)}
+  .hero-bg::after{background:linear-gradient(to bottom,rgba(10,10,15,.55) 0%,rgba(10,10,15,.60) 50%,rgba(10,10,15,.92) 85%,var(--dark) 100%)}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -243,7 +265,7 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
   <div class="point-note"><strong>ポイントシステム：</strong>厚木カップ（チーム戦）で獲得したポイントは、チームメンバー全員の個人ポイントとして付与されます。ランキングは個人単位で管理され、累計ポイント上位104名がFINAL（個人戦）に進出します。ポイントは「参加ポイント」＋「取得セットポイント（予選）」＋「順位ポイント（決勝T）」の合算で算出されます。</div>
   <div class="contribution-note"><strong>🏫 社会貢献：</strong>収益の一部は厚木市内の学校へのモルックセット寄贈に使用されます。</div>
 </section>
-
+  
 <div class="divider"></div>
 
 <section class="section" id="entry">
