@@ -22,21 +22,17 @@
 html{scroll-behavior:smooth}
 body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--white);overflow-x:hidden;line-height:1.7}
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;padding:2rem 2rem 5rem}
-
 /* PC：画像を85%サイズ・上寄りでスキットルも見える */
 .hero-bg{position:absolute !important;inset:0;background:url('molkky-bg.png') center 30% / 85% auto no-repeat;z-index:0 !important}
-
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,15,.50) 0%,rgba(10,10,15,.65) 40%,rgba(10,10,15,.90) 80%,var(--dark) 100%)}
 .hero>*{position:relative;z-index:1}
 .hero-badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:.4rem 1.5rem;font-size:.75rem;letter-spacing:.3em;font-family:'Oswald',sans-serif;margin-bottom:2rem;animation:fadeSlideDown .8s ease-out}
 .hero-prize{font-family:'Oswald',sans-serif;font-size:clamp(3rem,10vw,8rem);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:.5rem;animation:fadeSlideDown .8s ease-out .1s both}
 .hero-prize .yen{color:var(--gold);text-shadow:0 0 40px var(--gold-glow),0 0 80px rgba(212,160,23,.15)}
 .hero-title{font-family:'Oswald',sans-serif;font-size:clamp(1.2rem,3vw,2rem);font-weight:500;letter-spacing:.15em;color:var(--white-muted);margin-bottom:2rem;animation:fadeSlideDown .8s ease-out .2s both}
-
 /* 視認性改善：テキストシャドウ追加 */
 .hero-subtitle{font-size:.95rem;color:var(--white);max-width:600px;margin-bottom:1.5rem;animation:fadeSlideDown .8s ease-out .3s both;text-shadow:0 1px 8px rgba(0,0,0,.9),0 0 20px rgba(0,0,0,.8)}
 .hero-legal{font-size:.75rem;color:rgba(200,200,210,1);line-height:2;margin-bottom:2rem;text-align:center;animation:fadeSlideDown .8s ease-out .35s both;max-width:520px;text-shadow:0 1px 6px rgba(0,0,0,.95),0 0 16px rgba(0,0,0,.9)}
-
 /* ENTRYバナー：背景を半透明ダークに強化して視認性UP */
 .hero-app-banner{border:1px solid var(--gold);background:rgba(10,10,15,.75);backdrop-filter:blur(4px);padding:2rem 2.5rem;text-align:center;max-width:560px;width:100%;animation:fadeSlideDown .8s ease-out .4s both}
 .app-banner-title{font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:600;color:var(--gold);margin-bottom:.4rem;letter-spacing:.1em;line-height:1.6}
@@ -111,6 +107,11 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
 .schedule-table tr:hover td{background:rgba(255,255,255,.02)}
 .schedule-table .date-col{color:var(--white);font-weight:700;white-space:nowrap}
 .schedule-table .price-col{color:var(--gold);font-weight:600}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.info-item{display:flex;gap:1rem;align-items:flex-start;padding:1.5rem;background:var(--dark-card);border:1px solid var(--dark-border);transition:border-color .3s}
+.info-icon{width:40px;height:40px;min-width:40px;display:flex;align-items:center;justify-content:center;background:rgba(212,160,23,.1);border:1px solid rgba(212,160,23,.2);color:var(--gold);font-size:1.1rem}
+.info-label{font-size:.7rem;letter-spacing:.1em;color:var(--white-muted);text-transform:uppercase;margin-bottom:.3rem}
+.info-value{font-size:.95rem;font-weight:500;line-height:1.6}
 .ambassador-section{display:flex;gap:3rem;align-items:center;flex-wrap:wrap}
 .ambassador-img{width:280px;height:350px;object-fit:cover;object-position:top;border:1px solid var(--dark-border);flex-shrink:0}
 .ambassador-info{flex:1;min-width:280px}
@@ -170,7 +171,6 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
 @keyframes fadeSlideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
 @keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-
 @media(max-width:768px){
   .section{padding:3.5rem 1.2rem}
   .pricing-grid{grid-template-columns:1fr}
@@ -186,7 +186,6 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
   .conditions-inner{padding:2rem 1.2rem}
   .schedule-table{font-size:.75rem}
   .schedule-table th,.schedule-table td{padding:.5rem .6rem}
-
   /* ▼▼▼ スマホ：画像全体が見えるよう contain + 中央配置に変更 ▼▼▼ */
   .hero-bg{background-size:contain !important;background-position:center 20% !important;background-color:var(--dark)}
   .hero-bg::after{background:linear-gradient(to bottom,rgba(10,10,15,.55) 0%,rgba(10,10,15,.60) 50%,rgba(10,10,15,.92) 85%,var(--dark) 100%)}
@@ -238,8 +237,9 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
       </a>
     </div>
   </div>
+  <!-- ① 矢印「↓」を削除 -->
   <div class="hero-cta">
-    <a href="#series" class="btn btn-outline">大会詳細を見る ↓</a>
+    <a href="#series" class="btn btn-outline">大会詳細を見る</a>
     <a href="#sponsor" class="btn btn-outline">協賛のご案内</a>
   </div>
   <div class="hero-scroll">SCROLL</div>
@@ -458,7 +458,7 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
     <div class="faq-item"><div class="faq-q">1回だけの参加でもFINALに進出できますか？</div><div class="faq-a"><p>はい、可能です。累計ポイント上位100名がFINALに進出しますので、1回の参加でもチャンスがあります。ただし、複数回参加することでポイント獲得の機会が増えます。</p></div></div>
     <div class="faq-item"><div class="faq-q">チームメンバーを大会ごとに変更できますか？</div><div class="faq-a"><p>各大会でのチーム編成は柔軟に対応可能です。ポイントは個人に付与されるため、毎回異なるメンバーとチームを組むこともできます。</p></div></div>
     <div class="faq-item"><div class="faq-q">キャンセル・返金はできますか？</div><div class="faq-a"><p>自己都合によるキャンセルは返金不可です。主催者都合（天候等）で大会が中止になった場合のみ返金いたします。3回一括券も同様です。</p></div></div>
-    <div class="faq-item"><div class="faq-q">雨の場合はどうなりますか？</div><div class="faq-a"><p>雨天決行です。ただし、雷雨・大雪等の荒天時は中止となります。中止の場合は前日昼12時までに公式アナウンスを行います。</p></div></div>
+    <div class="faq-item"><div class="faq-q">雨の場合はどうなりますか？</div><div class="faq-a"><p>雨天決行です。ただし、雷雨・大雪等の荒天時は中止となります。中止の場合は前日昼12時までに公式Xにてアナウンスを行います。</p></div></div>
     <div class="faq-item"><div class="faq-q">FINALの賞金はどのように支払われますか？</div><div class="faq-a"><p>本大会は技能競技として開催しており、賞金は協賛企業様からのご提供です。参加費は大会運営費に使用され、賞金の原資には一切使用しておりません。FINALが雨天中止となった場合は、その時点の累計ポイント1位の方に賞金が贈呈されます。</p></div></div>
     <div class="faq-item"><div class="faq-q">食事クーポンとは何ですか？</div><div class="faq-a"><p>厚木カップ参加チームに、1チームあたり2,000円分の食事クーポンを配布します。厚木市内の協賛飲食店でご利用いただけます。</p></div></div>
     <div class="faq-item"><div class="faq-q">駐車場はありますか？</div><div class="faq-a"><p>厚木市荻野運動公園には駐車場がございますが、台数に限りがあります。公共交通機関のご利用もご検討ください。</p></div></div>
