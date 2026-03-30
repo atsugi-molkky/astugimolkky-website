@@ -400,59 +400,76 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
 
 <div class="divider"></div>
 
-<!-- 協賛ロゴエリア -->
-<section class="sponsor-logos-section" id="partners">
-  <div class="section">
-    <div class="section-label" style="text-align:center">Partners</div>
-    <h2 class="section-title" style="text-align:center">協賛</h2>
-
-    <div class="sponsor-category">
-      <div class="sponsor-category-title">企業・団体協賛</div>
-      <div class="sponsor-logos-grid">
-        <div style="display: flex; gap: 2rem; justify-content: center; align-items: center; flex-wrap: wrap; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 8px;">
-          
-          <img src="logo-urban-hotel.jpg" alt="アーバンホテル" style="max-width: 180px; height: auto; display: block;">
-          
-          <img src="logo-link-b-all.jpg" alt="LINK B ALL" style="max-width: 180px; height: auto; display: block;">
-          
-        </div>
-      </div>
-    </div>
-
-    <div class="sponsor-category">
-      <div class="sponsor-category-title">飲食店協賛</div>
-      <div class="sponsor-logos-grid">
-        <!-- ▼ 飲食店ロゴが決まったら <img src="logo.png" alt="店名" style="height:50px"> に置き換え ▼ -->
-        <div class="sponsor-placeholder">協賛飲食店様が決定次第、順次掲載いたします</div>
-      </div>
-      <div class="coupon-banner" style="margin-top:1.5rem">
-        <div class="coupon-banner-title">🍽️ 飲食店協賛のご案内</div>
-        <div class="coupon-banner-desc">大会参加チームに1チーム2,000円分の食事クーポンを配布。協賛飲食店として参加者の回遊を促進し、売上アップにつなげませんか？<br><a href="mailto:molkky.association.of.atsugi@gmail.com?subject=%E3%80%90%E9%A3%B2%E9%A3%9F%E5%BA%97%E5%8D%94%E8%B3%9B%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91" style="color:var(--gold);font-weight:700;font-size:.85rem">→ 飲食店協賛について問い合わせる</a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 協賛案内 -->
+<!-- 協賛セクション（統合） -->
 <section class="sponsor-section" id="sponsor">
-  <div class="section" style="padding-bottom:4rem">
-    <div class="sponsor-content">
+  <div class="section">
+    <!-- ヘッダー -->
+    <div class="sponsor-header" style="text-align:center">
       <div class="section-label" style="text-align:center">For Sponsors</div>
       <h2 class="section-title" style="text-align:center">協賛のご案内</h2>
-      <p class="section-desc" style="text-align:center;margin-left:auto;margin-right:auto">「モルック厚木シリーズ2026」は、厚木市の地域活性化とモルック競技の発展を目的としたイベントです。協賛企業様には、以下のPR機会をご提供いたします。</p>
-      <div class="sponsor-benefits">
-        <div class="benefit-item"><span class="benefit-check">✓</span><span>大会会場でのPRブース出展</span></div>
-        <div class="benefit-item"><span class="benefit-check">✓</span><span>モルックコミュニティへの電子広告配信</span></div>
-        <div class="benefit-item"><span class="benefit-check">✓</span><span>参加者向け資料・ノベルティの配布</span></div>
-        <div class="benefit-item"><span class="benefit-check">✓</span><span>スポンサーボードへの企業ロゴ掲載</span></div>
-        <div class="benefit-item"><span class="benefit-check">✓</span><span>地域貢献企画（学校へのモルック寄贈）の提供元としてPR</span></div>
-        <div class="benefit-item"><span class="benefit-check">✓</span><span>CSR活動としての地域スポーツ文化支援</span></div>
-      </div>
-      <p style="font-size:.85rem;color:var(--white-muted);margin-bottom:2rem">協賛プランの詳細につきましては、お気軽にお問い合わせください。</p>
-      <a href="mailto:molkky.association.of.atsugi@gmail.com?subject=%E3%80%90%E5%8D%94%E8%B3%9B%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E3%83%A2%E3%83%AB%E3%83%83%E3%82%AF%E5%8E%9A%E6%9C%A8%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA2026" class="btn btn-primary">協賛について問い合わせる →</a>
+      <p class="section-desc" style="text-align:center;margin-left:auto;margin-right:auto;margin-bottom:0">「モルック厚木シリーズ2026」は、厚木市の地域活性化とモルック競技の発展を目的としたイベントです。<br>大会への協賛・参画をご検討の企業・飲食店様は、以下よりお気軽にお問い合わせください。</p>
+    </div>
 
+    <!-- 2カラム -->
+    <div class="sponsor-columns">
+
+      <!-- 左：企業・団体協賛 -->
+      <div class="sponsor-col">
+        <div class="sponsor-col-header">
+          <div class="sponsor-col-icon">🏢</div>
+          <div>
+            <div class="sponsor-col-title">企業・団体協賛</div>
+            <div class="sponsor-col-sub">CORPORATE SPONSORS</div>
+          </div>
+        </div>
+
+        <!-- 協賛ロゴエリア -->
+        <div class="sponsor-logos-area">
+          <!-- ▼ ロゴが決まったら <img src="logo.png" alt="企業名"> に置き換え ▼ -->
+          <img src="logo-urban-hotel.jpg" alt="アーバンホテル">
+          <img src="logo-link-b-all.jpg" alt="LINK B ALL">
+        </div>
+
+        <!-- PRメリットリスト -->
+        <ul class="sponsor-benefit-list">
+          <li>大会会場でのPRブース出展</li>
+          <li>モルックコミュニティへの電子広告配信</li>
+          <li>参加者向け資料・ノベルティの配布</li>
+          <li>スポンサーボードへの企業ロゴ掲載</li>
+          <li>地域貢献企画（学校へのモルック寄贈）の提供元としてPR</li>
+          <li>CSR活動としての地域スポーツ文化支援</li>
+        </ul>
+
+        <a href="mailto:molkky.association.of.atsugi@gmail.com?subject=%E3%80%90%E5%8D%94%E8%B3%9B%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E3%83%A2%E3%83%AB%E3%83%83%E3%82%AF%E5%8E%9A%E6%9C%A8%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA2026" class="btn-sponsor-contact btn-sponsor-primary">協賛について問い合わせる →</a>
       </div>
-      </div></div>
+
+      <!-- 右：飲食店協賛 -->
+      <div class="sponsor-col">
+        <div class="sponsor-col-header">
+          <div class="sponsor-col-icon">🍽️</div>
+          <div>
+            <div class="sponsor-col-title">飲食店協賛</div>
+            <div class="sponsor-col-sub">RESTAURANT SPONSORS</div>
+          </div>
+        </div>
+
+        <!-- 飲食店ロゴエリア -->
+        <div class="sponsor-logos-area">
+          <!-- ▼ 飲食店ロゴが決まったら <img src="logo.png" alt="店名"> に置き換え ▼ -->
+          <span class="sponsor-logos-placeholder">協賛飲食店様が決定次第、順次掲載いたします</span>
+        </div>
+
+        <!-- クーポン情報 -->
+        <div class="sponsor-coupon-info">
+          <div class="coupon-headline">🎟️ 1チーム 2,000円分の食事クーポン配布</div>
+          <p>大会参加チームに、厚木市内の協賛飲食店で使えるクーポンを配布。参加者の回遊を促進し、売上アップにつなげませんか？</p>
+        </div>
+
+        <a href="mailto:molkky.association.of.atsugi@gmail.com?subject=%E3%80%90%E9%A3%B2%E9%A3%9F%E5%BA%97%E5%8D%94%E8%B3%9B%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91" class="btn-sponsor-contact btn-sponsor-outline">飲食店協賛について問い合わせる →</a>
+      </div>
+
+    </div><!-- /.sponsor-columns -->
+  </div>
 </section>
 
 <section class="section" id="faq">
