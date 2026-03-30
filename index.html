@@ -190,6 +190,15 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
   .hero-bg{background-size:contain !important;background-position:center 20% !important;background-color:var(--dark)}
   .hero-bg::after{background:linear-gradient(to bottom,rgba(10,10,15,.55) 0%,rgba(10,10,15,.60) 50%,rgba(10,10,15,.92) 85%,var(--dark) 100%)}
 }
+  /* ロゴ画像サイズ制御 */
+.sponsor-logos-area img{
+  max-height: 48px;
+  max-width: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
 </style>
 <script type="application/ld+json">
 {
@@ -424,10 +433,10 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
         </div>
 
         <!-- 協賛ロゴエリア -->
-        <div class="sponsor-logos-area">
-          <!-- ▼ ロゴが決まったら <img src="logo.png" alt="企業名"> に置き換え ▼ -->
-          <img src="logo-urban-hotel.jpg" alt="アーバンホテル">
-          <img src="logo-link-b-all.jpg" alt="LINK B ALL">
+          <div class="sponsor-logos-area">
+            <img src="logo-urban-hotel.jpg" alt="アーバンホテル" style="max-height:48px;max-width:160px;width:auto;height:auto;object-fit:contain;">
+            <img src="logo-link-b-all.jpg" alt="LINK B ALL" style="max-height:48px;max-width:160px;width:auto;height:auto;object-fit:contain;">
+          </div>
         </div>
 
         <!-- PRメリットリスト -->
