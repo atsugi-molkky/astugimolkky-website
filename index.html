@@ -22,9 +22,10 @@
 html{scroll-behavior:smooth}
 body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--white);overflow-x:hidden;line-height:1.7}
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;padding:2rem 2rem 5rem}
-/* PC：画像を85%サイズ・上寄りでスキットルも見える */
-.hero-bg{position:absolute !important;inset:0;background:url('molkky-bg2.png') center 30% / 85% auto no-repeat;z-index:0 !important}
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,15,.50) 0%,rgba(10,10,15,.65) 40%,rgba(10,10,15,.90) 80%,var(--dark) 100%)}
+/* PC：molkky-bg3.pngを透明度50%で背景表示 */
+.hero-bg{position:absolute !important;inset:0;z-index:0 !important;overflow:hidden}
+.hero-bg::before{content:'';position:absolute;inset:0;background:url('molkky-bg3.png') center center / cover no-repeat;opacity:0.5}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,15,.45) 0%,rgba(10,10,15,.60) 40%,rgba(10,10,15,.88) 80%,var(--dark) 100%)}
 .hero>*{position:relative;z-index:1}
 .hero-badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:.4rem 1.5rem;font-size:.75rem;letter-spacing:.3em;font-family:'Oswald',sans-serif;margin-bottom:2rem;animation:fadeSlideDown .8s ease-out}
 .hero-prize{font-family:'Oswald',sans-serif;font-size:clamp(3rem,10vw,8rem);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:.5rem;animation:fadeSlideDown .8s ease-out .1s both}
@@ -427,7 +428,7 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
       </div>
       <div class="coupon-banner" style="margin-top:1.5rem">
         <div class="coupon-banner-title">🍽️ 飲食店協賛のご案内</div>
-        <div class="coupon-banner-desc">大会参加チームに1チーム2,000円分の食事クーポンを配布。協賛飲食店として参加者の回遊を促進し、売上アップにつなげませんか？<br><a href="mailto:molkky.association.of.atsugi@gmail.com?subject=%E3%80%90%E9%A3%B2%E9%A3%9F%E5%BA%97%E5%8D%94%E8%B3%9B%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91" style="color:var(--gold);font-weight:700;font-size:.85rem">→ 飲食店協賛について問い合わせる</a></div>
+        <div class="coupon-banner-desc">大会参加チームに1チーム2,000円分の食事クーポンを配布。協賛飲食店として参加者の回遊を促進し、売上アップにつなげませんか？<br><a href="/cdn-cgi/l/email-protection#472a282b2c2c3e6926343428242e26332e28296928216926333432202e07202a262e2b6924282a783432252d2224337a620274627f77627e7762027e62067462057562027e620674627e01620272620506627e70620272627f03627e7362027f620574627e05620272627e72627f01620274627f76627f73620272627e77627f7f620274627f75627f01620274627f76627e05620274627f77627e76" style="color:var(--gold);font-weight:700;font-size:.85rem">→ 飲食店協賛について問い合わせる</a></div>
       </div>
     </div>
   </div>
@@ -449,7 +450,7 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
         <div class="benefit-item"><span class="benefit-check">✓</span><span>CSR活動としての地域スポーツ文化支援</span></div>
       </div>
       <p style="font-size:.85rem;color:var(--white-muted);margin-bottom:2rem">協賛プランの詳細につきましては、お気軽にお問い合わせください。</p>
-      <a href="mailto:molkky.association.of.atsugi@gmail.com?subject=%E3%80%90%E5%8D%94%E8%B3%9B%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91%E3%83%A2%E3%83%AB%E3%83%83%E3%82%AF%E5%8E%9A%E6%9C%A8%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA2026" class="btn btn-primary">協賛について問い合わせる →</a>
+      <a href="/cdn-cgi/l/email-protection#204d4f4c4b4b590e4153534f43494154494f4e0e4f460e41545355474960474d41494c0e434f4d1f5355424a4543541d05651305181005191005651505186405191405651805621305196205651505191505186605651305181105181405651505191005181805651305181205186605651305181105196205651305181005191105651305181305611205651305181305616205651305181305181305651305181205616605651505186505196105651605196305611805651305181205621705651305181305616105651305181305626305651305181205626112101216" class="btn btn-primary">協賛について問い合わせる →</a>
 
       </div>
       </div></div>
@@ -495,7 +496,7 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
 
 <footer class="footer">
   <div class="footer-org">NPO法人 神奈川県央ラボ ／ 厚木モルック連盟</div>
-  <div class="footer-email"><a href="mailto:molkky.association.of.atsugi@gmail.com">molkky.association.of.atsugi@gmail.com</a></div>
+  <div class="footer-email"><a href="/cdn-cgi/l/email-protection#0964666562627027687a7a666a60687d60666727666f27687d7a7c6e60496e64686065276a6664"><span class="__cf_email__" data-cfemail="04696b686f6f7d2a6577776b676d65706d6b6a2a6b622a65707771636d446369656d682a676b69">[email&#160;protected]</span></a></div>
   <div class="footer-sns">
     <!-- ▼ X（Twitter）アカウントのURLを設定してください ▼ -->
     <a href="https://x.com/Atsu_mol2025" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> X（Twitter）</a>
@@ -531,10 +532,5 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
   </div>
 </div>
 
-<script>
-document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const i=q.parentElement,o=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));if(!o)i.classList.add('open')})});
-document.querySelectorAll('.detail-tab').forEach(t=>{t.addEventListener('click',()=>{document.querySelectorAll('.detail-tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.detail-panel').forEach(x=>x.classList.remove('active'));t.classList.add('active');document.getElementById('panel-'+t.dataset.tab).classList.add('active')})});
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
-</script>
-</body>
-</html>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const i=q.parentElement,o=i.classList.contains('open');document.querySelecto
