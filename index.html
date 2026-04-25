@@ -343,10 +343,10 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
   <table class="schedule-table">
     <thead><tr><th>区分</th><th>期間</th><th>参加費（1チーム）</th><th>備考</th></tr></thead>
     <tbody>
-      <tr><td class="date-col">厚木市民優先</td><td>5/12（月）20:00 〜 5/18（日）23:59</td><td class="price-col">¥7,500</td><td>厚木市在勤在住者が代表者の場合</td></tr>
-      <tr><td class="date-col">一般超早割</td><td>5/19（月）20:00 〜 5/25（日）23:59</td><td class="price-col">¥8,000</td><td>残枠先着順</td></tr>
-      <tr><td class="date-col">一般早割</td><td>5/26（月）20:00 〜 6/1（日）23:59</td><td class="price-col">¥8,500</td><td>残枠先着順</td></tr>
-      <tr><td class="date-col">一般通常</td><td>6/2（月）20:00 〜 6/8（日）23:59</td><td class="price-col">¥9,000</td><td>残枠先着順</td></tr>
+      <tr><td class="date-col">厚木市民優先</td><td>5/12（月）20:00 〜 5/19（月）19:59</td><td class="price-col">¥7,500</td><td>厚木市在勤在住者が代表者の場合</td></tr>
+      <tr><td class="date-col">一般超早割</td><td>5/19（月）20:00 〜 5/26（月）19:59</td><td class="price-col">¥8,000</td><td>残枠先着順</td></tr>
+      <tr><td class="date-col">一般早割</td><td>5/26（月）20:00 〜 6/2（月）19:59</td><td class="price-col">¥8,500</td><td>残枠先着順</td></tr>
+      <tr><td class="date-col">一般通常</td><td>6/2（月）20:00 〜 6/9（月）19:59</td><td class="price-col">¥9,000</td><td>残枠先着順</td></tr>
     </tbody>
   </table>
 
@@ -398,7 +398,10 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
 
 <section class="section" id="details">
   <div class="section-label">Tournament Details</div>
-  <h2 class="section-title">大会詳細</h2>
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+    <h2 class="section-title" style="margin:0;">大会詳細</h2>
+    <button onclick="document.getElementById('tournament-rules-overlay').classList.add('open');document.body.style.overflow='hidden'" class="btn btn-outline" style="padding:.6rem 1.4rem;font-size:.85rem;white-space:nowrap;">大会規約全文を確認</button>
+  </div>
   <div class="detail-tabs">
     <button class="detail-tab active" data-tab="cup">厚木カップ（全4回）</button>
     <button class="detail-tab" data-tab="final">厚木FINAL</button>
@@ -620,10 +623,10 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
     <table class="schedule-table" style="margin-bottom:2rem;">
       <thead><tr><th>区分</th><th>期間（予定）</th><th>参加費</th><th>備考</th></tr></thead>
       <tbody>
-        <tr><td class="date-col">厚木市民優先</td><td>6/30（月）20:00 〜 7/6（日）23:59</td><td class="price-col">¥7,500</td><td>厚木市在勤在住者が代表者の場合</td></tr>
-        <tr><td class="date-col">一般超早割</td><td>7/7（月）20:00 〜 7/13（日）23:59</td><td class="price-col">¥8,000</td><td>残枠先着順</td></tr>
-        <tr><td class="date-col">一般早割</td><td>7/14（月）20:00 〜 7/20（日）23:59</td><td class="price-col">¥8,500</td><td>残枠先着順</td></tr>
-        <tr><td class="date-col">一般通常</td><td>7/21（月）20:00 〜 7/27（日）23:59</td><td class="price-col">¥9,000</td><td>残枠先着順</td></tr>
+        <tr><td class="date-col">厚木市民優先</td><td>6/30（月）20:00 〜 7/7（月）19:59</td><td class="price-col">¥7,500</td><td>厚木市在勤在住者が代表者の場合</td></tr>
+        <tr><td class="date-col">一般超早割</td><td>7/7（月）20:00 〜 7/14（月）19:59</td><td class="price-col">¥8,000</td><td>残枠先着順</td></tr>
+        <tr><td class="date-col">一般早割</td><td>7/14（月）20:00 〜 7/21（月）19:59</td><td class="price-col">¥8,500</td><td>残枠先着順</td></tr>
+        <tr><td class="date-col">一般通常</td><td>7/21（月）20:00 〜 7/28（月）19:59</td><td class="price-col">¥9,000</td><td>残枠先着順</td></tr>
       </tbody>
     </table>
 
@@ -631,10 +634,10 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
     <table class="schedule-table" style="margin-bottom:2rem;">
       <thead><tr><th>区分</th><th>期間（予定）</th><th>参加費</th><th>備考</th></tr></thead>
       <tbody>
-        <tr><td class="date-col">厚木市民優先</td><td>9/16（月）20:00 〜 9/22（日）23:59</td><td class="price-col">¥7,500</td><td>厚木市在勤在住者が代表者の場合</td></tr>
-        <tr><td class="date-col">一般超早割</td><td>9/23（月）20:00 〜 9/29（日）23:59</td><td class="price-col">¥8,000</td><td>残枠先着順</td></tr>
-        <tr><td class="date-col">一般早割</td><td>9/30（月）20:00 〜 10/6（日）23:59</td><td class="price-col">¥8,500</td><td>残枠先着順</td></tr>
-        <tr><td class="date-col">一般通常</td><td>10/7（月）20:00 〜 10/13（日）23:59</td><td class="price-col">¥9,000</td><td>残枠先着順</td></tr>
+        <tr><td class="date-col">厚木市民優先</td><td>9/16（月）20:00 〜 9/23（月）19:59</td><td class="price-col">¥7,500</td><td>厚木市在勤在住者が代表者の場合</td></tr>
+        <tr><td class="date-col">一般超早割</td><td>9/23（月）20:00 〜 9/30（月）19:59</td><td class="price-col">¥8,000</td><td>残枠先着順</td></tr>
+        <tr><td class="date-col">一般早割</td><td>9/30（月）20:00 〜 10/7（月）19:59</td><td class="price-col">¥8,500</td><td>残枠先着順</td></tr>
+        <tr><td class="date-col">一般通常</td><td>10/7（月）20:00 〜 10/14（月）19:59</td><td class="price-col">¥9,000</td><td>残枠先着順</td></tr>
       </tbody>
     </table>
 
@@ -642,10 +645,10 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
     <table class="schedule-table" style="margin-bottom:2rem;">
       <thead><tr><th>区分</th><th>期間（予定）</th><th>参加費</th><th>備考</th></tr></thead>
       <tbody>
-        <tr><td class="date-col">厚木市民優先</td><td>10/6（月）20:00 〜 10/12（日）23:59</td><td class="price-col">¥7,500</td><td>厚木市在勤在住者が代表者の場合</td></tr>
-        <tr><td class="date-col">一般超早割</td><td>10/13（月）20:00 〜 10/19（日）23:59</td><td class="price-col">¥8,000</td><td>残枠先着順</td></tr>
-        <tr><td class="date-col">一般早割</td><td>10/20（月）20:00 〜 10/26（日）23:59</td><td class="price-col">¥8,500</td><td>残枠先着順</td></tr>
-        <tr><td class="date-col">一般通常</td><td>10/27（月）20:00 〜 11/2（日）23:59</td><td class="price-col">¥9,000</td><td>残枠先着順</td></tr>
+        <tr><td class="date-col">厚木市民優先</td><td>10/6（月）20:00 〜 10/13（月）19:59</td><td class="price-col">¥7,500</td><td>厚木市在勤在住者が代表者の場合</td></tr>
+        <tr><td class="date-col">一般超早割</td><td>10/13（月）20:00 〜 10/20（月）19:59</td><td class="price-col">¥8,000</td><td>残枠先着順</td></tr>
+        <tr><td class="date-col">一般早割</td><td>10/20（月）20:00 〜 10/27（月）19:59</td><td class="price-col">¥8,500</td><td>残枠先着順</td></tr>
+        <tr><td class="date-col">一般通常</td><td>10/27（月）20:00 〜 11/3（月）19:59</td><td class="price-col">¥9,000</td><td>残枠先着順</td></tr>
       </tbody>
     </table>
 
@@ -660,6 +663,59 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
 
     <div style="text-align:center;margin-top:3rem">
       <button class="btn btn-outline" onclick="document.getElementById('entry-schedule-overlay').classList.remove('open');document.body.style.overflow=''">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<div class="conditions-overlay" id="tournament-rules-overlay">
+  <div class="conditions-inner">
+    <button class="conditions-close" onclick="document.getElementById('tournament-rules-overlay').classList.remove('open');document.body.style.overflow=''">✕</button>
+    <h2>大会規約（同意事項）</h2>
+    <p style="margin-bottom:2rem;color:var(--white-muted);">本大会にエントリーされる方は、以下のすべての項目に同意したものとみなします。エントリー前に必ずご確認ください。</p>
+    
+    <div style="font-size:.9rem;line-height:1.7;">
+      <h3>1. 大会の位置付けおよび賞金に関する同意（重要）</h3>
+      <p>本大会は参加者の実力を競う「技能競技」として開催されます。お支払いいただく参加費は、会場費、運営費、備品費等の大会運営に必要な経費のみに使用されます。</p>
+      <p>優勝賞金（100万円）をはじめとする賞金・賞品類は、すべて協賛企業様からのご提供によるものであり、参加費は賞金の原資に一切使用しておりません。参加者はこの運営方針および法令遵守の仕組みを理解し、同意するものとします。</p>
+
+      <h3>2. エントリーおよび参加条件</h3>
+      <p>本シリーズへのエントリーおよび成績・ポイント管理には、公式アプリ「NICE MÖLKKY JAPAN」のダウンロードおよび会員登録が必須となります。</p>
+      <p>チームメンバー全員の登録が完了していることを参加の条件とします。</p>
+
+      <h3>3. 競技の公平性と不正行為に対するペナルティ</h3>
+      <p>替え玉出場、その他競技の公平性を著しく損なう不正行為が発覚した場合、当該チームおよび個人の全獲得ポイントを即時剥奪し、本シリーズおよび今後の大会への出場を禁止します。</p>
+      <p>大会終了後（優勝確定後）に不正が発覚した場合は、優勝タイトルを取り消し、賞金の返還を求めるとともに、次点者への賞金繰り上げ支給を実施します。</p>
+
+      <h3>4. 開催判断および雨天・荒天時の対応</h3>
+      <p>大会は原則「雨天決行」とします。ただし、雷雨・大雪等の荒天時や、参加者の安全確保が困難と主催者が判断した場合は中止とします。</p>
+      <p>中止の判断は、原則として（大会前日の昼12時まで）にアプリ内・メール・公式X（旧Twitter）等にてアナウンスいたします。</p>
+      <p><strong>【厚木FINAL特例】</strong> 12月のFINAL当日に荒天等で大会が中止となった場合、その時点での累計厚木ポイント1位の選手（FINALにエントリー済みの者に限る）に賞金100万円を贈呈します。1位が複数名（同点）の場合は該当者で均等に分配します。</p>
+
+      <h3>5. キャンセルおよび返金ポリシー</h3>
+      <p>自己都合によるキャンセルについては、いかなる理由（体調不良、交通機関の遅延、メンバーの欠員等）であっても参加費の返金は一切いたしません。</p>
+      <p>主催者都合（天候不良等による開催中止）の場合に限り、参加費を返金いたします。</p>
+      <p>4大会一括券をご購入の場合で主催者都合の中止が発生した際は、1回あたりの金額（切り上げ計算）を返金いたします。</p>
+
+      <h3>6. 安全管理および免責事項</h3>
+      <p>大会としてスポーツ傷害保険等の加入は行っておりません。競技中における怪我、事故、熱中症、または参加者同士・第三者との対人トラブル等については、すべて自己責任での対応となります。</p>
+      <p>必要に応じて各自で保険等にご加入ください。</p>
+      <p>会場内での貴重品、荷物、競技用具の盗難、紛失、破損について、主催者は一切の責任を負いません。ご自身での厳重な管理をお願いいたします。</p>
+
+      <h3>7. マナーおよび遵守事項</h3>
+      <p>スポーツマンシップに則り、互いに敬意を持ってプレーしてください。</p>
+      <p>他の参加者、審判、運営スタッフに対する暴言、威圧的な態度、進行を故意に妨げる行為など、不適切な行動が確認された場合は、主催者の権限で即刻退場および今後の参加をお断りする措置をとります。その際の参加費の返金は行いません。</p>
+      <p>会場の美化にご協力ください。発生したゴミは各自で必ずお持ち帰りいただきますようお願いいたします。</p>
+
+      <h3>8. メディア・肖像権の取り扱い</h3>
+      <p>大会中に主催者または主催者が許可したメディアが撮影する写真、映像等の著作権および肖像権は主催者に帰属します。</p>
+      <p>撮影された素材は、大会公式サイト、公式アプリ、各種SNS、メディア媒体、および協賛企業様のプロモーション等に掲載される場合があります。掲載に重大な支障がある場合は、必ず大会当日までに受付等でお申し出ください。</p>
+
+      <h3>9. 個人情報の取り扱い</h3>
+      <p>エントリー時およびアプリ内で取得した個人情報は、本大会の運営、ポイント管理、次回以降の大会案内、および協賛企業からの特典付与（食事クーポン案内等）の目的のみに使用し、適切に管理いたします。</p>
+    </div>
+
+    <div style="text-align:center;margin-top:3rem">
+      <button class="btn btn-outline" onclick="document.getElementById('tournament-rules-overlay').classList.remove('open');document.body.style.overflow=''">閉じる</button>
     </div>
   </div>
 </div>
