@@ -400,7 +400,10 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
   <div class="section-label">Tournament Details</div>
   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
     <h2 class="section-title" style="margin:0;">大会詳細</h2>
-    <button onclick="document.getElementById('tournament-rules-overlay').classList.add('open');document.body.style.overflow='hidden'" class="btn btn-outline" style="padding:.6rem 1.4rem;font-size:.85rem;white-space:nowrap;">大会規約全文を確認</button>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <button onclick="document.getElementById('tournament-outline-overlay').classList.add('open');document.body.style.overflow='hidden'" class="btn btn-primary" style="padding:.6rem 1.4rem;font-size:.85rem;white-space:nowrap;">大会要項を確認</button>
+      <button onclick="document.getElementById('tournament-rules-overlay').classList.add('open');document.body.style.overflow='hidden'" class="btn btn-outline" style="padding:.6rem 1.4rem;font-size:.85rem;white-space:nowrap;">大会規約全文を確認</button>
+    </div>
   </div>
   <div class="detail-tabs">
     <button class="detail-tab active" data-tab="cup">厚木カップ（全4回）</button>
@@ -716,6 +719,140 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--wh
 
     <div style="text-align:center;margin-top:3rem">
       <button class="btn btn-outline" onclick="document.getElementById('tournament-rules-overlay').classList.remove('open');document.body.style.overflow=''">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<div class="conditions-overlay" id="tournament-outline-overlay">
+  <div class="conditions-inner">
+    <button class="conditions-close" onclick="document.getElementById('tournament-outline-overlay').classList.remove('open');document.body.style.overflow=''">✕</button>
+    <h2>モルック厚木シリーズ2026 大会要項</h2>
+    <p style="margin-bottom:2rem;color:var(--white-muted);">厚木カップVol.1〜4および厚木FINALの詳細な開催要項です。</p>
+    
+    <div style="font-size:.9rem;line-height:1.7;">
+      <h3>1. 開催概要</h3>
+      <ul style="padding-left:1.2rem;">
+        <li><strong>大会名：</strong> 厚木カップVol.1〜4</li>
+        <li><strong>開催時間：</strong> 10:00 ～ 17:00 ※9時40分までに受付完了をお願いします</li>
+        <li><strong>チーム人数：</strong> 1チーム 2名～4名</li>
+      </ul>
+
+      <h3>2. 大会ルール</h3>
+      <p>日本モルック協会公認ルール（<a href="https://molkky.jp/play/official-rule-book/" target="_blank" style="color:var(--gold)">公式ルールブック</a>）を基本とし、本大会独自の個別ルールを適用します。</p>
+      
+      <h4>基本ルール</h4>
+      <ul style="padding-left:1.2rem;">
+        <li><strong>得点：</strong> 倒れた本数が得点。1本のみの場合は記載数字が得点</li>
+        <li><strong>勝利条件：</strong> ぴったり50点獲得でセット終了</li>
+        <li><strong>50点オーバー：</strong> 25点に戻り再開</li>
+        <li><strong>ターン制限：</strong> 各試合最大12ターンで終了</li>
+        <li><strong>失格（フォルト）：</strong> チームで3連続0点（ミス）の場合は失格（当該試合は0点）</li>
+        <li><strong>不戦勝：</strong> 対戦相手がすべて失格となった場合、残ったチームが勝利（50点獲得）扱い</li>
+        <li><strong>反則：</strong> モルッカーリを越えた投てき、および投てき順の間違いはフォルト（0点）</li>
+      </ul>
+
+      <h3>3. 当日のタイムスケジュール</h3>
+      
+      <h4>午前の部</h4>
+      <ul style="padding-left:1.2rem;">
+        <li>09:00 - 09:40 開場・受付・フリー練習</li>
+        <li>09:40 - 09:55 開会式・集合写真撮影</li>
+        <li>10:00 - 10:35 予選 第1試合</li>
+        <li>10:40 - 11:15 予選 第2試合</li>
+        <li>11:20 - 11:55 予選 第3試合</li>
+        <li>11:55 - 12:30 集計・お昼休憩（同点時のモルックアウト実施）</li>
+      </ul>
+      
+      <h4>午後の部</h4>
+      <ul style="padding-left:1.2rem;">
+        <li>12:30 - 13:10 決勝1回戦</li>
+        <li>13:15 - 13:55 決勝2回戦 ／ 交流第1試合</li>
+        <li>14:00 - 14:40 準々決勝 ／ 交流第2試合</li>
+        <li>14:45 - 15:25 準決勝／ 交流第3試合</li>
+        <li>15:30 - 16:10 決勝戦</li>
+        <li>16:15 - 16:30 閉会式・表彰式</li>
+        <li>16:30 - 16:55 完全撤収</li>
+      </ul>
+      <p style="font-size:.8rem;color:var(--white-muted);">※チーム数に応じて変動（80チーム以下の場合上位32チームが決勝トーナメントに進出）</p>
+
+      <h3>4. 厚木ポイント付与ロジック</h3>
+      <p>合計獲得ポイントは、以下の [1] ＋ [2] ＋ [3] の合算となります。</p>
+      
+      <h4>[1] 参加ポイント</h4>
+      <p>一律 250ポイント</p>
+      
+      <h4>[2] 予選ポイント</h4>
+      <p>予選の得点がそのままポイントになります。（例：予選320点＝320ポイント）</p>
+      
+      <h4>[3] 決勝トーナメントポイント</h4>
+      <p><strong>計算式：</strong> 順位ボーナスチーム数 × 400 × 順位％</p>
+      <div style="background:var(--dark-card);border:1px solid var(--dark-border);padding:1rem;margin:1rem 0;">
+        <table style="width:100%;font-size:.8rem;">
+          <tr><th style="text-align:left;color:var(--gold)">順位</th><th style="text-align:left;color:var(--gold)">順位％</th><th style="text-align:left;color:var(--gold)">獲得ポイント例（60チーム）</th></tr>
+          <tr><td>1位（優勝）</td><td>12%</td><td>2,880ポイント</td></tr>
+          <tr><td>2位（準優勝）</td><td>6%</td><td>1,440ポイント</td></tr>
+          <tr><td>ベスト4（3〜4位）</td><td>5%</td><td>1,200ポイント</td></tr>
+          <tr><td>ベスト8（5〜8位）</td><td>4%</td><td>960ポイント</td></tr>
+          <tr><td>ベスト16（9〜16位）</td><td>3%</td><td>720ポイント</td></tr>
+          <tr><td>1回戦敗退（17〜32位）</td><td>2%</td><td>480ポイント</td></tr>
+        </table>
+      </div>
+      <p style="color:var(--gold)"><strong>特典：</strong> 優勝チームは厚木FINALでのシード権が付与されます。</p>
+
+      <h3>5. 厚木FINAL（決勝大会）</h3>
+      <p>累計ポイント上位者が、賞金100万円を懸けて戦う最終決戦。</p>
+      
+      <h4>出場枠（計104名）</h4>
+      <ul style="padding-left:1.2rem;">
+        <li><strong>選出基準：</strong> 原則として、累計厚木ポイントの上位104名が出場権を獲得</li>
+        <li><strong>同点時の対応：</strong> ボーダーライン（100位前後）で同ポイントのプレイヤーが複数名いる場合、残りの出場枠は抽選で決定</li>
+      </ul>
+      
+      <h4>シード権について（全8枠）</h4>
+      <ul style="padding-left:1.2rem;">
+        <li>各大会（各回）の優勝者であること</li>
+        <li>かつ、「累計厚木ポイント」が上位8名に入っていること</li>
+        <li>【必須条件】 累計ポイントが全体で「100位以内」にランクインしていること</li>
+      </ul>
+      
+      <h4>試合形式・ハンデ</h4>
+      <ul style="padding-left:1.2rem;">
+        <li><strong>ベスト64まで：</strong> 2セット先取</li>
+        <li><strong>ベスト32以降：</strong> 3セット先取</li>
+        <li><strong>上位者ハンデ規定：</strong> ベスト32、ベスト16、ベスト8の試合において、対戦する両者のランキングが50位以上離れている場合、上位者に「1セット」が付与</li>
+      </ul>
+      
+      <h4>賞金・特典</h4>
+      <ul style="padding-left:1.2rem;">
+        <li><strong>優勝賞金：</strong> 100万円（1名）</li>
+        <li><strong>参加特典：</strong> ÖMLAUTコラボ限定アイテム</li>
+        <li><strong>雨天中止時の特例：</strong> FINAL当日に雨天中止となった場合、その時点の「累計厚木ポイント1位」のプレイヤーに賞金100万円が贈呈</li>
+      </ul>
+
+      <h3>6. よくあるご質問（FAQ）</h3>
+      <div style="background:var(--dark-card);border:1px solid var(--dark-border);padding:1rem;margin:1rem 0;">
+        <p><strong>Q. 最低試合数は？</strong><br>
+        A. 予選リーグにて、各チーム3試合（計6セット）は必ずプレイいただけます。</p>
+        
+        <p><strong>Q. 予選敗退後は帰宅ですか？</strong><br>
+        A. 交流戦がございます。参加希望の方はアプリ上で参加申し込みいただければ交流戦ができます。</p>
+        
+        <p><strong>Q. 遅刻や途中帰宅は？</strong><br>
+        A. やむを得ない場合は必ずスタッフへお知らせください。途中棄権扱いとなります。</p>
+        
+        <p><strong>Q. 参加人数が変更になった場合は？</strong><br>
+        A. 公式アプリから変更してください。アプリ以外の場合はメールか公式XのDMにてお知らせください。</p>
+      </div>
+      
+      <div style="background:var(--dark-card);border:1px solid var(--dark-border);padding:1.5rem;margin:2rem 0;">
+        <p style="color:var(--gold);font-weight:bold;margin-bottom:1rem;">📱 アプリ必須</p>
+        <p>主催大会参加者は全員アプリのダウンロードが必須です。未導入の場合、NMP付与の対象外となります。<br>
+        <strong>公式アプリ：NICE MÖLKKY JAPAN</strong> iOS版 ／ Android版</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:3rem">
+      <button class="btn btn-outline" onclick="document.getElementById('tournament-outline-overlay').classList.remove('open');document.body.style.overflow=''">閉じる</button>
     </div>
   </div>
 </div>
